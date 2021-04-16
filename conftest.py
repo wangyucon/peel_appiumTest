@@ -18,6 +18,7 @@ def init_peel():
     desired_caps['deviceName'] = RunConfig.deviceName
     desired_caps['appPackage'] = RunConfig.appPackage
     desired_caps['appActivity'] = RunConfig.appActivity
+    desired_caps['automationName'] = RunConfig.automationName
     driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub',desired_caps)
 
     RunConfig.driver = driver

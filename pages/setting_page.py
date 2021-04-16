@@ -4,8 +4,12 @@ from peel_appiumTest.pages.basepage import BasePage
 """
 class SettingPage(BasePage):
 
+    #   按钮 设置
+    def button_setting(self):
+        self.by_id('com.dongxiangtech.peeldiary:id/ll_mine_setting').click()
+    #   按钮 账号管理
     def button_account_management(self):
-        self.by_xpath('//*[@text="账号管理"]')
+        self.by_xpath('//*[@text="账号管理"]').click()
 
     """
         账号管理界面page层
@@ -103,4 +107,10 @@ class SettingPage(BasePage):
     #   按钮 取消
     def button_pop_cancel(self):
         self.by_id('com.dongxiangtech.peeldiary:id/tv_dialog_right').click()
+
+    def webdriverwait_account(self):
+        self.webdriverwait_byxpath('//*[@text="账号管理"]')
+
+    def webdriverwait_bind(self):
+        self.webdriverwait_byid('com.dongxiangtech.peeldiary:id/tv_manager_we_chat')
 

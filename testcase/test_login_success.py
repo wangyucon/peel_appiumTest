@@ -9,12 +9,13 @@ from peel_appiumTest.pages import login_page,mine_page
 
 class TestLogInSuccess():
     @pytest.mark.parametrize('phone,password', [(17612282244, 123456)])
-    def test_login_long_fail(self, init_peel, phone, password):
+    def test_login_success(self, init_peel, phone, password):
         # 实例化page对象
         lp = login_page.LogIn(init_peel)
         mp = mine_page.MinePage(init_peel)
 
         try:
+            mp.webdriverwait_mine()
             mp.button_mine()
             lp.webdriverwait_change()
             lp.button_login_change()

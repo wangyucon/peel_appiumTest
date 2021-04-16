@@ -1,6 +1,6 @@
 
 
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions as EC, expected_conditions
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 
@@ -35,10 +35,16 @@ class BasePage():
 
     """
     Appium 显示等待
+    By Id
+    By Xpath
     """
     def webdriverwait_byid(self,id):
         wait = WebDriverWait(self.driver,5,0.2)
         wait.until(EC.presence_of_element_located((By.ID, id)))
+
+    def webdriverwait_byxpath(self,xpath):
+        wait = WebDriverWait(self.driver,5,0.2)
+        wait.until(EC.presence_of_element_located((By.XPATH, xpath)))
 
 
     """
@@ -83,8 +89,9 @@ class BasePage():
     def get_toast(self,toast):
 
         wait = WebDriverWait(self.driver, 10, 0.2)
-        a = wait.until(EC.presence_of_element_located((By.XPATH, '//*[@text='+'"'+toast+'"'+']')))
-        return a
+        a = wait.until(expected_conditions.presence_of_element_located((By.XPATH, '//*[@text='+'"'+toast+'"'+']')))
+        return a.text
+
 
 
 

@@ -35,3 +35,5 @@ class RunConfig:
 
     # 报告路径（不需要修改）
     NEW_REPORT = None
+
+    automationName = 'UiAutomator2'

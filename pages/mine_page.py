@@ -12,9 +12,6 @@ class MinePage(BasePage):
     #   按钮 编辑资料
     def button_info(self):
         self.by_id('com.dongxiangtech.peeldiary:id/tv_mine_edit_info').click()
-    #   按钮 设置
-    def button_setting(self):
-        self.by_id('com.dongxiangtech.peeldiary:id/ll_mine_setting').click()
     #   按钮 点赞
     def button_user_like(self):
         self.by_id('com.dongxiangtech.peeldiary:id/ll_mine_user_like').click()
@@ -33,3 +30,6 @@ class MinePage(BasePage):
     #   按钮 发布作品（当用户没有作品时显示<发布作品>按钮）
     def button_message(self):
         self.by_id('com.dongxiangtech.peeldiary:id/tv_empty_message').click()
+
+    def webdriverwait_mine(self):
+        self.webdriverwait_byid('com.dongxiangtech.peeldiary:id/tv_tab_mine')

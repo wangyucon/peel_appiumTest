@@ -29,7 +29,7 @@ class LogIn(BasePage):
     def button_login_change(self):
         self.by_id('com.dongxiangtech.peeldiary:id/tv_login_change').click()
     def webdriverwait_change(self):
-        BasePage.webdriverwait_byid(self,'com.dongxiangtech.peeldiary:id/tv_login_change')
+       self.webdriverwait_byid('com.dongxiangtech.peeldiary:id/tv_login_change')
 
 
 
