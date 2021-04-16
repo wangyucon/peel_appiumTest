@@ -32,3 +32,6 @@ class RunConfig:
 
     # 当达到最大失败数，停止执行
     max_fail = "5"
+
+    # 报告路径（不需要修改）
+    NEW_REPORT = None

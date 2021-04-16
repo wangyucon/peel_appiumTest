@@ -5,10 +5,21 @@ import pytest
 from peel_appiumTest.conftest import REPORT_DIR
 
 
+def init_env(new_report):
+    """
+    初始化测试报告目录
+    """
+    os.mkdir(new_report)
+    os.mkdir(new_report + "/image")
+
+# 获取当前时间转化为固定格式
 now_time = time.strftime("%Y_%m_%d_%H_%M_%S")
 
 # 给RunConfig.NEW_REPORT赋值
 RunConfig.NEW_REPORT = os.path.join(REPORT_DIR, now_time)
+
+# 初始化测试报告目录及截图存放路径
+init_env(RunConfig.NEW_REPORT)
 html_report = os.path.join(RunConfig.NEW_REPORT,"report.html")
 xml_report = os.path.join(RunConfig.NEW_REPORT,"junit-xml.xml")
 
