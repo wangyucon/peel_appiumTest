@@ -5,7 +5,7 @@
 """
 import pytest
 from selenium.common.exceptions import NoSuchElementException
-from ..pages import login_page,mine_page
+from peel_appiumTest.pages import login_page,mine_page
 
 class TestLogInSuccess():
     @pytest.mark.parametrize('phone,password', [(17612282244, 123456)])

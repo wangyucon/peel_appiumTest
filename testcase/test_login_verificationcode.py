@@ -1,6 +1,6 @@
 import pytest
 from selenium.common.exceptions import TimeoutException
-from ..pages import mine_page,login_page
+from peel_appiumTest.pages import mine_page,login_page
 
 class TestLogInVerificationCode():
 
