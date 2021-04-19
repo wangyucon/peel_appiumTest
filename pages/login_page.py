@@ -1,4 +1,4 @@
-from basepage import BasePage
+from pages.basepage import BasePage
 """
     登陆界面page层
 """
