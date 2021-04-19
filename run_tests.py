@@ -1,6 +1,6 @@
 import os
 import time
-from peel_appiumTest.config import RunConfig
+from config import RunConfig
 import pytest
 from conftest import REPORT_DIR
 
