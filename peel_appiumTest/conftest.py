@@ -2,7 +2,7 @@ import pytest
 import os
 from py.xml import html
 from appium import webdriver
-from config import RunConfig
+from peel_appiumTest.peel_appiumTest.config import RunConfig
 
 # 项目报告目录配置
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))

@@ -7,7 +7,7 @@ class RunConfig:
     运行测试配置
     """
     # 运行测试用例的目录
-    case_path = os.path.join(PRO_PATH,'testcase')
+    case_path = os.path.join(PRO_PATH, 'testcase')
 
     # 平台名称
     platformName = 'Android'
