@@ -1,5 +1,5 @@
 from pages import setting_page
-import test_login_success
+from testcase import test_login_success
 
 class TestSettingAccount():
 
