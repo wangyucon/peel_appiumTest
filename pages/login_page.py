@@ -1,4 +1,4 @@
-from peel_appiumTest.pages.basepage import BasePage
+from basepage import BasePage
 """
     登陆界面page层
 """
