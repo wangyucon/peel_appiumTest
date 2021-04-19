@@ -1,4 +1,4 @@
-from peel_appiumTest.peel_appiumTest.pages.basepage import BasePage
+from peel_appiumTest.pages.basepage import BasePage
 """
     设置界面page层
 """

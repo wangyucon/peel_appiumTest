@@ -1,4 +1,4 @@
-from peel_appiumTest.peel_appiumTest.pages import setting_page
+from peel_appiumTest.pages import setting_page
 import test_login_success
 
 class TestSettingAccount():

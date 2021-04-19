@@ -1,8 +1,8 @@
 import os
 import time
-from peel_appiumTest.peel_appiumTest.config import RunConfig
+from peel_appiumTest.config import RunConfig
 import pytest
-from peel_appiumTest.peel_appiumTest.conftest import REPORT_DIR
+from conftest import REPORT_DIR
 
 
 def init_env(new_report):
