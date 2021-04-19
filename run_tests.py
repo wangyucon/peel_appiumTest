@@ -34,8 +34,5 @@ if __name__ =="__main__":
     # ‘--html=’:生成pytest_html到指定路径下并指定文件名
     # '--maxfail':当达到最大失败数，停止执行
     # '--reruns':失败重跑次数
-    pytest.main([RunConfig.case_path, "-s", "-v",
-                 "--html=" + html_report,
-                 "--junit-xml=" + xml_report,
-                 "--self-contained-html"
+    pytest.main([RunConfig.case_path, "-s", "-v"
                  ])
