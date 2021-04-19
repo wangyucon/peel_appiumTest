@@ -5,7 +5,7 @@
 """
 import pytest
 from selenium.common.exceptions import NoSuchElementException
-from peel_appiumTest.pages import login_page,mine_page
+from ..pages import login_page,mine_page
 
 class TestLogInException():
     # 用例参数化
