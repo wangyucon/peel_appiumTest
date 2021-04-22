@@ -1,5 +1,5 @@
-from pages import setting_page
-from testcase import test_login_success
+from peel_appiumTest.pages import setting_page
+import test_login_success
 
 class TestSettingAccount():
 
