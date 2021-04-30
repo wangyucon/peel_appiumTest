@@ -62,7 +62,7 @@ class SettingPage(BasePage):
 
 
     def button_feedback(self):
-        self.by_xpath('//*[@text="意见反馈"]')
+        self.by_xpath('//*[@text="意见反馈"]').click()
     """
         意见反馈界面page
     """
@@ -81,10 +81,10 @@ class SettingPage(BasePage):
 
 
     def button_blacklist(self):
-        self.by_xpath('//*[@text="黑名单"]')
+        self.by_xpath('//*[@text="黑名单"]').click()
 
     def button_about_us(self):
-        self.by_xpath('//*[@text="关于我们"]')
+        self.by_xpath('//*[@text="关于我们"]').click()
     """
         关于我们界面page
     """
@@ -94,10 +94,13 @@ class SettingPage(BasePage):
     #   按钮 隐私协议
     def button_privacy_policy(self):
         self.by_id('com.dongxiangtech.peeldiary:id/tv_privacy_policy').click()
+    #   按钮 关闭
+    def button_close(self):
+        self.by_id('com.dongxiangtech.peeldiary:id/tv_right').click()
 
 
     def button_logout(self):
-        self.by_xpath('//*[@text="退出登陆"]')
+        self.by_xpath('//*[@text="退出登陆"]').click()
     """
         退出登陆弹窗page
     """

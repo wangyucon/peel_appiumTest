@@ -1,5 +1,5 @@
 from peel_appiumTest.pages import setting_page
-import test_login_success
+from peel_appiumTest.testcase import test_login_success
 
 class TestSettingAccount():
 
@@ -21,3 +21,13 @@ class TestSettingAccount():
 
         sp.button_qq_bind()
         assert '你已经绑定QQ了' == sp.get_toast('你已经绑定QQ了')
+
+    def test_account_password(self,init_peel):
+        sp = setting_page.SettingPage(init_peel)
+
+        sp.button_edit_password()
+        sp.webdriverwait_byid('com.dongxiangtech.peeldiary:id/btn_submit')
+        sp.input_update_password('123456')
+        sp.button_send()
+        sp.webdriverwait_byxpath('//*[@text="向右拖动滑块填充拼图"]')
+        assert '向右拖动滑块填充拼图' == sp.get_text_by_xpath('//*[@text="向右拖动滑块填充拼图"]')
